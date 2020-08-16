@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  db:
+    environment:
+      - POSTGRES_DB=apidb
+      - POSTGRES_USER=api
+      - POSTGRES_PASSWORD=passpass
+    image: postgres:11.1-alpine
+    networks:
+      - default
+    ports:
+      - "5432:5432"
+    restart: on-failure
+    volumes:
+      - .db:/var/lib/postgresql/data
