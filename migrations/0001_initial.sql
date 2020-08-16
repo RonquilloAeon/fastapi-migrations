@@ -6,7 +6,7 @@ CREATE TABLE category (
 CREATE TABLE source (
     id integer GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     author text NOT NULL,
-    work text NOT NULL
+    work text
 );
 
 CREATE TABLE quote (
